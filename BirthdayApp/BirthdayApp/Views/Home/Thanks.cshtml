@@ -1,0 +1,29 @@
+﻿@model BirthdayApp.Models.UserResponse
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+</head>
+<body>
+    <div> 
+      <h2>Thanks, @Model.Name</h2>
+        <h4>@Model.Email</h4>
+        @if (Model.WillAttend == true)
+        {
+            <p>We are happy</p>
+        }
+        else
+        {
+            <p>We are sorry</p>
+        }
+
+        @Html.ActionLink("View Users","ListResponse")
+    </div>
+</body>
+</html>

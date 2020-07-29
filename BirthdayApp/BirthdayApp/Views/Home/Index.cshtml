@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+
+        <h2>@ViewBag.Message, Friends </h2>
+        <h4>You are invited to party!</h4>
+        <p>Lütfen Aşağıdaki Formu Doldurun</p>
+
+        @Html.ActionLink("Form","ResponseForm")
+    </div>
+</body>
+</html>

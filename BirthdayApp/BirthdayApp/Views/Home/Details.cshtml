@@ -1,0 +1,32 @@
+﻿@model BirthdayApp.Models.UserResponse
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+</head>
+<body>
+    <dl class="dl-horizontal">
+        <dt>Name</dt>
+        <dd>@Model.Name</dd>
+
+        <dt>Email</dt>
+        <dd>@Model.Email</dd>
+
+        <dt>Phone</dt>
+        <dd>@Model.Phone</dd>
+
+        <dt>Will Attend</dt>
+        <dd>@Model.WillAttend</dd>
+    </dl>
+</body>
+</html>

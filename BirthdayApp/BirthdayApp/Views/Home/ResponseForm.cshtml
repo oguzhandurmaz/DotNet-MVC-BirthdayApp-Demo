@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ResponseForm</title>
+</head>
+<body>
+    @if (ViewBag.Success != null)
+    {
+        <p>@ViewBag.Success</p>
+    }
+
+
+   @using (Html.BeginForm())
+   {
+
+       @Html.ValidationSummary()
+
+       <p>@Html.TextBox("Name")</p>
+       <p>@Html.TextBox("Email")</p>
+       <p>@Html.TextBox("Phone")</p>
+       <p>
+           @Html.DropDownList("WillAttend",
+          new[]
+          {
+              new SelectListItem(){Text= "Yes",Value = bool.TrueString},
+              new SelectListItem(){Text = "No", Value = bool.FalseString}
+          },"Choose an option")
+
+        <input type="submit" value="Send"/>
+       </p>
+   }
+</body>
+</html>
